@@ -74,8 +74,9 @@ const ProductsDetailsSchema = new Schema(
     },
 
     isActive: {
-      type: Boolean,
-      default: true,
+      type: String,
+      enum: ["Yes", "No"],
+      default: "Yes",
     },
   },
   {
@@ -86,6 +87,8 @@ const ProductsDetailsSchema = new Schema(
 ProductsDetailsSchema.index({
     name: "text"
 });
+
+ProductsDetailsSchema.index({ isActive: 1 });
 
 module.exports = mongoose.model(
   'ProductsDetails',

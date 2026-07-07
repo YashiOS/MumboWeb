@@ -12,7 +12,7 @@ router.post('/saveAddress', async(req, res, next) => {
                 message: "Address, latitude and longitude are required."
             });
         }
-
+        
         const user = await User.findOne({ userId });
 
         if (!user) {
