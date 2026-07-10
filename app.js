@@ -8,6 +8,7 @@ const allowedOrigins = [
   "http://localhost:3080",
   "https://mumzo.in",
   "https://www.mumzo.in",
+  "https://green-herring-760228.hostingersite.com",
 ];
 const server = http.createServer(app);
 app.use(
